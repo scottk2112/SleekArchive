@@ -4,5 +4,5 @@
 	define("DATABASEDB", "SleekArchive" // The database name
 	define("PASSWORDDB", "dGfae5k_SfCF"); // The database password. 
 	define("JOURNAL_NAME", "My Journal"); // The Journal name.
-	define("APPPASSWORD", "spring123"); // The Journal password. 
+	define("APPPASSWORD", "isaac"); // The Journal password. 
 ?>
