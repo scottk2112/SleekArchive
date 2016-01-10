@@ -69,7 +69,7 @@ session_start();
 		$res = $con->query($query);
 		while($row = mysqli_fetch_array($res, MYSQLI_ASSOC))
 		{
-			$filename = "entries/".$row["id"].".entry";
+			$filename = "/entries/".$row["id"].".entry";
 			echo $filename;
 			echo $row;
 			chmod($filename, 777);
