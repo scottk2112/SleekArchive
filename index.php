@@ -70,7 +70,7 @@ session_start();
 		while($row = mysqli_fetch_array($res, MYSQLI_ASSOC))
 		{
 			$filename = "entries/".$row["id"].".entry";
-			chmod($fiename, 755);
+			chmod($filename, 755);
 			$handle = fopen($filename, "r");
 			$contents = fread($handle, filesize($filename));
 			$entryfinal = $contents;
