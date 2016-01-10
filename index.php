@@ -70,8 +70,11 @@ session_start();
 		while($row = mysqli_fetch_array($res, MYSQLI_ASSOC))
 		{
 			$filename = "entries/".$row["id"].".entry";
+			echo $filename;
+			echo $row;
 			chmod($filename, 777);
 			$handle = fopen($filename, "r");
+			echo $handle;
 			$contents = fread($handle, filesize($filename));
 			$entryfinal = $contents;
 			fclose($handle);
