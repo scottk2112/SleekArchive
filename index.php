@@ -70,9 +70,8 @@ session_start();
 		while($row = mysqli_fetch_array($res, MYSQLI_ASSOC))
 		{
 			$filename = "entries/".$row["id"].".entry";
-			$handle = fopen($filename, "r+");
+			$handle = fopen($filename, "w+");
 			$contents = fread($handle, filesize($filename));
-			rewind($filename);
 			$entryfinal = $contents;
 			fclose($handle);
 			echo '<div id="note'.$row['id'].'" class="notecard">
