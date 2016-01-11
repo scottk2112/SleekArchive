@@ -72,6 +72,7 @@ session_start();
 			$filename = "entries/".$row["id"].".entry";
 			$handle = fopen($filename, "r+");
 			$contents = fread($handle, filesize($filename));
+			rewind($filename);
 			$entryfinal = $contents;
 			fclose($handle);
 			echo '<div id="note'.$row['id'].'" class="notecard">
