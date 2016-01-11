@@ -69,7 +69,7 @@ session_start();
 		$res = $con->query($query);
 		while($row = mysqli_fetch_array($res, MYSQLI_ASSOC))
 		{
-			$filename = "entries/".$row["id"].".entry";
+			$filename = "/home/skupferman/shk2112.com/SleekArchive/entries/".$row["id"].".entry";
 			$handle = fopen($filename, "r");
 			$contents = fread($handle, filesize($filename));
 			$entryfinal = $contents;
